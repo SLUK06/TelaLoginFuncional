@@ -4,6 +4,8 @@ include "../Includes/Config.php";
 
 $nome = "";
 
+$button = "<a class='Btn-Painel-Adm' href='Administrador.php'>Acessar Painel</a>";
+
 if(!isset($_SESSION['UsuarioID'])){
    session_destroy();
 
@@ -42,6 +44,11 @@ if(isset($_SESSION['UsuarioNome'])){
                     }
                 ?>
             </text>
+            <?php if($_SESSION['UsuarioNivel'] == 2){
+                
+                echo $button;
+            }
+            ?>
             <a class="Btn-LogOut" href="../Includes/LogOut.php">Sair</a>
         </div>
     </main>

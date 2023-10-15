@@ -40,3 +40,10 @@
 .Btn-LogOut:hover{
     transform: scale(1.1);
 }
+.Btn-Painel-Adm{
+    font-size: 30px;
+    border: solid 2px #90E0EF;
+    padding: 5px 10px;
+    text-decoration: none;
+    background-color: black;
+}

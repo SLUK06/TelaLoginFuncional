@@ -7,9 +7,19 @@
     width: 100vw;
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     background-color: #90E0EF;
+}
+.users{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.usr-comum, .usr-admin{
+    margin: 0 20px;
 }
 .login-container{
     width: 450px;

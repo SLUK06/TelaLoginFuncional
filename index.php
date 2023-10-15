@@ -58,6 +58,10 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </form>
             <text class="msg-Erro"><?php echo $loginInvalido ?></text>
         </div>
+        <div class="users">
+            <text class="usr-comum"></br><b>Usuario comum</b></br>Usuario: demo</br>Email: usuario@demo.com.br</br>Senha: usuario1</text>
+            <text class="usr-admin"></br><b>Usuario administrador</b></br>Usuario: admin</br>Email: admin@demo.com.br</br>Senha: admin</text>
+        </div>
     </main>
 </body>
 </html>

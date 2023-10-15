@@ -20,9 +20,17 @@ if($_SESSION['UsuarioNivel'] == 1){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" type="text/css" href="../Styles/StylesAdm.css">
     <title>Painel Admin</title>
 </head>
 <body>
-    Painel Administrador
+    <main class="Adm-Screen">
+        <div class="Conteudo">
+            <text class="Texto-Principal">
+                Olá <b><?php echo $_SESSION['UsuarioNome'] ?></b></Br>Bem vindo ao painel de administrador! 
+            </text>
+            <a class="Btn-Voltar" href="Home.php">Voltar</a>
+        </div>
+    </main>
 </body>
 </html>

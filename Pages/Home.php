@@ -10,9 +10,6 @@ if(!isset($_SESSION['UsuarioID'])){
    header('Location: ../index.php'); exit;
 }
 
-if(isset($_SESSION['UsuarioNome'])){
-    $nome = $_SESSION['UsuarioNome'];
-}
 ?>
 
 <!DOCTYPE html>
@@ -30,7 +27,7 @@ if(isset($_SESSION['UsuarioNome'])){
     <main class="Home-Screen">
         <div class="Conteudo">
             <text class="Texto-Principal">
-                Olá <b><?php echo $nome ?></b></br>Você está logado como: 
+                Olá <b><?php echo $_SESSION['UsuarioNome'] ?></b></br>Você está logado como: 
                 <?php
                     if(isset($_SESSION['UsuarioNivel'])){ 
                         if($_SESSION['UsuarioNivel'] == 1){

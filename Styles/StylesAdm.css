@@ -4,7 +4,7 @@
     font-family: 'Raleway', sans-serif;
     color: #ffffff;
 }
-.Home-Screen{
+.Adm-Screen{
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -29,15 +29,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-.Btn-LogOut, .Btn-Painel-Adm{
+.Btn-Voltar{
     font-size: 30px;
     border: solid 2px #90E0EF;
     padding: 5px 10px;
     margin: 10px;
     text-decoration: none;
     background-color: black;
-}
-.Btn-LogOut:hover{
-    transform: scale(1.1);
 }

@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+.login-screen{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #90E0EF;
+}
+.login-container{
+    width: 450px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #023E8A;
+}
+.title{
+    align-self: center;
+    justify-self: flex-start;
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.login-inputs{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+    margin: 75px;
+}
+.col-email, .col-senha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.text-label{
+    align-self: flex-start;
+    color: #ffffff;
+}
+.inputs{
+    width: 299px;
+    height: 30px;
+}
+.btn-inputs{
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+.msg-Erro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}

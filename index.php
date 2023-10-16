@@ -7,15 +7,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $usuario = $_POST["Usuario"];
     $senha = $_POST["Senha"];
 
-    $sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE `usuario` = '$usuario' OR `email` = '$usuario' AND `senha` = '$senha' AND `ativo` = 1 LIMIT 1";
+    $sql = "SELECT `id`, `nome`, `nivel` FROM `usuarios` WHERE `usuario` = ? OR `email` = ? AND `senha` = ? AND `ativo` = 1 LIMIT 1";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("sss", $usuario, $usuario, $senha);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $query = $conn->query($sql);;
-
-    if(mysqli_num_rows($query) !== 1){
+    if($result->num_rows !== 1){
         $loginInvalido = "Usuário ou senha estão incorretos!";
 
     }else{
-        $resultado = mysqli_fetch_assoc($query);
+        $resultado = $result->fetch_assoc();
 
         if(!isset($_SESSION)) session_start();
 
